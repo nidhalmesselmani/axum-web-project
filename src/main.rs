@@ -20,7 +20,7 @@ async fn main() {
     let server_address = std::env::var("SERVER_ADDRESS").unwrap_or("127.0.0.1:3000".to_owned());
     let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL not found in env file");
     
-    //create our database pool
+    // create our database pool
     let db_pool = PgPoolOptions::new()
         .max_connections(64)
         .acquire_timeout(Duration::from_secs(5))
